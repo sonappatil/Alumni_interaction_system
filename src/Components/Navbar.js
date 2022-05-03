@@ -10,10 +10,10 @@ function Navbar() {
         fontSize:'16px',
         color:'white',
         border:'none',
-        borderRadius:'3px',
+        marginRight:'28px',
         marginTop:'10px',
         marginBottom:'10px',
-        marginRight:'28px',
+        borderRadius:'3px',
         cursor:'pointer',
         textDecoration:'none'
        
@@ -23,14 +23,16 @@ function Navbar() {
   return (
     <div>
         <div>
-            <div style={{backgroundColor:'#f0f6fc',padding:'8px',display:'flex',justifyContent:'space-between'}}>
-                <img style={{width:'60px', height:'60px',borderRadius:'50%'}} src="https://img.collegedekhocdn.com/media/img/institute/logo/1665457.png" alt="" />
+            <div style={{backgroundColor:'#f0f6fc',padding:'8px',display:'flex',
+            justifyContent:'space-between',position:'fixed',right:'0',left:'0',height:'70px'}}>
+                <img style={{width:'70px', height:'70px',borderRadius:'50%'}} src="https://img.collegedekhocdn.com/media/img/institute/logo/1665457.png" alt="" />
                 <div >
-                    <ul type='none'style={{display:'flex',justifyContent:'space-between'}}>
+                    <div style={{display:'flex'}}>
                         <Link to='deptStudents' style={mystyle} >Login</Link> 
                         <button style={mystyle}>SignUp</button>
                         <h3>Hello ,There</h3>
-                    </ul>
+                    </div>
+                    
                 </div>
             </div>
            
