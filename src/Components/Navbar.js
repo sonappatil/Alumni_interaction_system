@@ -25,12 +25,12 @@ function Navbar() {
         <div>
             <div style={{backgroundColor:'#f0f6fc',padding:'8px',display:'flex',
             justifyContent:'space-between',position:'fixed',right:'0',left:'0',height:'70px'}}>
-                <img style={{width:'70px', height:'70px',borderRadius:'50%'}} src="https://img.collegedekhocdn.com/media/img/institute/logo/1665457.png" alt="" />
+                <img style={{width:'70px', height:'70px',borderRadius:'50%',marginLeft:'10px'}} src="https://img.collegedekhocdn.com/media/img/institute/logo/1665457.png" alt="" />
                 <div >
                     <div style={{display:'flex'}}>
-                        <Link to='deptStudents' style={mystyle} >Login</Link> 
-                        <button style={mystyle}>SignUp</button>
-                        <h3>Hello ,There</h3>
+                        <Link to='/login' style={mystyle} >Login</Link> 
+                        <button disabled={true} style={mystyle}>SignUp</button>
+                        <h3 style={{marginRight:'10px'}}>Hello ,There</h3>
                     </div>
                     
                 </div>

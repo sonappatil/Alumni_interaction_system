@@ -1,9 +1,11 @@
 import React, { useState,useEffect } from 'react'
-import './DeptStudents.css'
-import { db } from './Firebase'
-import { collection , getDocs , doc } from 'firebase/firestore'
+import './PlacedStudents.css'
+import { db } from '../Firebase'
+import { collection , getDocs } from 'firebase/firestore'
+import NavbarForDept from './NavbarForDept';
+//import search_icon from '../Images/search_icon.png'
 
-function DeptStudents() {
+function PlacedStudents() {
   
   const [users , setusers] = useState([]);
 
@@ -19,11 +21,50 @@ function DeptStudents() {
     }
     getUsers();
   }, [])
+
+  const style ={
+   inputstyle:{
+    padding:'12px 24px',
+    borderRadius:'20px',
+    width:'400px',
+    textAlign:'center',
+    fontSize:'18px'
+   },
+   imagestyle:{
+    width:'25px' , 
+    height:'25px',
+    position:'absolute',
+    left:'650px',
+    paddingLeft:'4px',
+    paddingTop:'10px'
+   }
+  }
   
 
   return (
+    
+    <>
+    <NavbarForDept/>
+
+    <center>
+    <div style={style.inputstyle}>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+    </div>
+
     <div>
-       <center> 
+      <h2>IT Department</h2>
+    </div>
+   
+    <div style={{marginTop:'50px'}}>
+      
+       
            <table >
               
             <thead>
@@ -52,11 +93,13 @@ function DeptStudents() {
             }
           
         </table>
-        </center>
-    </div>
+      
+       </div>
+    </center>
+    </>
   )
 }
 
-export default DeptStudents
+export default PlacedStudents;
 
 
