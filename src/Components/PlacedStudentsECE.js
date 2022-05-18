@@ -5,13 +5,13 @@ import { collection , getDocs } from 'firebase/firestore'
 import NavbarForDept from './NavbarForDept';
 //import search_icon from '../Images/search_icon.png'
 
-function PlacedStudents() {
+function PlacedStudentsECE() {
   
   const [users , setusers] = useState([]);
 
   useEffect(() => {
     const getUsers = async() => {
-      const userCollectionRef = collection(db,"onCampus");
+      const userCollectionRef = collection(db,"campusECE");
       const data = await getDocs(userCollectionRef);
       setusers(
         data.docs.map((doc) => ({
@@ -24,11 +24,11 @@ function PlacedStudents() {
 
   const style ={
    inputstyle:{
+     marginTop:'100px',
     padding:'12px 24px',
     borderRadius:'20px',
     width:'400px',
-    textAlign:'center',
-    fontSize:'18px'
+    fontSize:'20px'
    },
    imagestyle:{
     width:'25px' , 
@@ -44,23 +44,14 @@ function PlacedStudents() {
   return (
     
     <>
-    <NavbarForDept/>
+    <NavbarForDept dept='Electrical and Communication'/>
 
     <center>
-    <div style={style.inputstyle}>
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-    </nav>
+    <div>
+      <input style={style.inputstyle} type="text" placeholder='search' />
     </div>
 
-    <div>
-      <h2>IT Department</h2>
-    </div>
+    
    
     <div style={{marginTop:'50px'}}>
       
@@ -100,6 +91,6 @@ function PlacedStudents() {
   )
 }
 
-export default PlacedStudents;
+export default PlacedStudentsECE;
 
 

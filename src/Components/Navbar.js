@@ -29,7 +29,7 @@ function Navbar() {
                 <div >
                     <div style={{display:'flex'}}>
                         <Link to='/login' style={mystyle} >Login</Link> 
-                        <button disabled={true} style={mystyle}>SignUp</button>
+                        <Link to='/signup'><button style={mystyle}>SignUp</button></Link>
                         <h3 style={{marginRight:'10px'}}>Hello ,There</h3>
                     </div>
                     

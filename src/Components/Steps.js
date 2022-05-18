@@ -22,16 +22,18 @@ function Steps() {
         <div style={style.style2}>
         
         <div style={style.style1}>
-        <Link to='/placedStudents'><h2>Search for an Alumni</h2></Link>
+        <Link to='/it'><h2>Search for an Alumni</h2></Link>
         </div>
         
         <div style={style.style1}>
            <Link to='/placementdrives'><h2>Check for placement drives</h2></Link>
         </div>
         <div style={style.style1}>
-           <h2>Are you an Alumni ?
-             Give us some details
-           </h2>
+           <Link to='/alumniinfo'>
+              <h2>Are you an Alumni ?
+                Give us some details
+              </h2>
+           </Link>
         </div>
         </div>
     </div>

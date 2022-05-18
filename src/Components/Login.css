@@ -11,3 +11,16 @@
 .input{
     margin-bottom: 40px;
 }
+.btn{
+    background-color:#4f94d4;
+    padding:10px 38px ;
+    font-size:16px;
+    color:white;
+    border:none;
+    margin-right:28px;
+    margin-top:10px;
+    margin-bottom:10px;
+    border-radius:3px;
+    cursor:pointer;
+    text-decoration:none
+}

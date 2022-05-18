@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import './Login.css'
 
-function Login() {
+function SignUp() {
   return (
     <div >
         <center>
@@ -17,16 +16,17 @@ function Login() {
                 <input type="password" className="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1"/>
             </div>
             </section>
-
-            <div className='input'>
-                <Link to="/forgotpassword">Forgot Password?</Link>
+            <section className='input'>
+            <div className="input-group mb-3 ">
+                <input type="password" className="form-control" placeholder="Confirm Password" aria-label="Username" aria-describedby="basic-addon1"/>
             </div>
-
-            <button type="button" className="btn btn-info">Log In</button>
+            </section>
+            
+            <button type="button" className="btn btn-info">SignUp</button>
             </div>
         </center>
     </div>
   )
 }
 
-export default Login
+export default SignUp
