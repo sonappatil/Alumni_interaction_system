@@ -35,6 +35,12 @@ function Steps() {
               </h2>
            </Link>
         </div>
+        <div style={style.style1}>
+           <Link to='/offcampus'>
+              <h2>off campus students
+              </h2>
+           </Link>
+        </div>
         </div>
     </div>
   )

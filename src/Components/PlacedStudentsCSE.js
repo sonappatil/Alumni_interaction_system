@@ -8,6 +8,7 @@ import NavbarForDept from './NavbarForDept';
 function PlacedStudentsCSE() {
   
   const [users , setusers] = useState([]);
+  const [text, settext] = useState('')
 
   useEffect(() => {
     const getUsers = async() => {
@@ -48,7 +49,7 @@ function PlacedStudentsCSE() {
 
     <center>
     <div>
-      <input style={style.inputstyle} type="text" placeholder='search' />
+      <input style={style.inputstyle} value={text} onChange={(e) => {settext(e.target.value)}} type="text" placeholder='search' />
     </div>
 
     
@@ -69,7 +70,20 @@ function PlacedStudentsCSE() {
             </thead>
             
             {
-              users.map((user)=>{
+              users.filter((val) => {
+                if(text === ''){
+                    return val;
+                }
+                else if(val.Name.toLowerCase().includes(text.toLowerCase()) ||
+                val.company.toLowerCase().includes(text.toLowerCase()) ||
+                val.session.toLowerCase().includes(text.toLowerCase()) ||
+                val.Package.toLowerCase().includes(text.toLowerCase()) ||
+                val.dept.toLowerCase().includes(text.toLowerCase())
+                ){
+                    return val;
+                }
+                return 0;
+               }).map((user)=>{
                 return(
                     <tr key={user.id}>
                         <td>{user.Name}</td>

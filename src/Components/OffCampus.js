@@ -2,17 +2,17 @@ import React, { useState,useEffect } from 'react'
 import './PlacedStudents.css'
 import { db } from '../Firebase'
 import { collection , getDocs } from 'firebase/firestore'
-import NavbarForDept from './NavbarForDept';
+import NavbarForOffCampus from './NavbarForOffCampus';
 //import search_icon from '../Images/search_icon.png'
 
-function PlacedStudentsEE() {
+function OffCampus() {
   
   const [users , setusers] = useState([]);
   const [text, settext] = useState('')
 
   useEffect(() => {
     const getUsers = async() => {
-      const userCollectionRef = collection(db,"campusEE");
+      const userCollectionRef = collection(db,"offCampus");
       const data = await getDocs(userCollectionRef);
       setusers(
         data.docs.map((doc) => ({
@@ -40,16 +40,16 @@ function PlacedStudentsEE() {
     paddingTop:'10px'
    }
   }
-  
 
+  
   return (
     
     <>
-    <NavbarForDept dept='Electrical'/>
+    <NavbarForOffCampus/>
 
     <center>
     <div>
-      <input style={style.inputstyle} value={text} onChange={(e) => settext(e.target.value)} type="text" placeholder='search' />
+      <input style={style.inputstyle} value={text} onChange={(e) => settext(e.target.value)} type="text" placeholder='search...' />
     </div>
 
     
@@ -64,6 +64,7 @@ function PlacedStudentsEE() {
                 <th>Name</th>
                 <th>Company</th>
                 <th>Package</th>
+                <th>Department</th>
                 <th>Session</th>
                 <th>LinkedIn Profile</th>
             </tr>
@@ -71,26 +72,27 @@ function PlacedStudentsEE() {
             
             {
               users.filter((val) => {
-                if(text === ''){
-                    return val;
-                }
-                else if(val.Name.toLowerCase().includes(text.toLowerCase()) ||
-                val.company.toLowerCase().includes(text.toLowerCase()) ||
-                val.session.toLowerCase().includes(text.toLowerCase()) ||
-                val.Package.toLowerCase().includes(text.toLowerCase()) ||
-                val.dept.toLowerCase().includes(text.toLowerCase())
-                ){
-                    return val;
-                }
-                return 0;
-               }).map((user)=>{
+                  if(text === ''){
+                      return val;
+                  }
+                  else if(val.Name.toLowerCase().includes(text.toLowerCase()) ||
+                  val.company.toLowerCase().includes(text.toLowerCase()) ||
+                  val.session.toLowerCase().includes(text.toLowerCase()) ||
+                  val.Package.toLowerCase().includes(text.toLowerCase()) ||
+                  val.dept.toLowerCase().includes(text.toLowerCase())
+                  ){
+                      return val;
+                  }
+                  return 0;
+                 }).map((user)=>{
                 return(
                     <tr key={user.id}>
                         <td>{user.Name}</td>
                         <td>{user.company}</td>
                         <td>{user.Package}</td>
+                        <td>{user.dept}</td>
                         <td>{user.session}</td>
-                        <td><a href={`https://www.linkedin.com/in/${user.Link}/`}>Profile Link</a></td>
+                        <td><a href={`https://${user.Link}`}>Profile Link</a></td>
                      </tr>
                   
                 )
@@ -105,6 +107,6 @@ function PlacedStudentsEE() {
   )
 }
 
-export default PlacedStudentsEE;
+export default OffCampus;
 
 

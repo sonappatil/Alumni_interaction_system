@@ -1,8 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Login.css'
+import { logOut } from '../Firebase'
 
 function Login() {
+
+  const handleLogOut = async() => {
+    try{
+      await logOut();
+    }
+    catch(error){
+      alert(error.message);
+    }
+  }
   return (
     <div >
         <center>
@@ -23,6 +33,8 @@ function Login() {
             </div>
 
             <button type="button" className="btn btn-info">Log In</button>
+
+            <button type="button" onClick={handleLogOut} className="btn btn-info">Log out</button>
             </div>
         </center>
     </div>

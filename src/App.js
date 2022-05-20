@@ -17,6 +17,7 @@ import PlacedStudentsECE from './Components/PlacedStudentsECE';
 import SignUp from './Components/SignUp';
 import AlumniInfo from './Components/AlumniInfo';
 import ForgotPass from './Components/ForgotPass';
+import OffCampus from './Components/OffCampus';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
        <Route path='signup' element={<SignUp/>}/>
        <Route path='alumniinfo' element={<AlumniInfo/>}/>
        <Route path='forgotpassword' element={<ForgotPass/>}/>
+       <Route path='offcampus' element={<OffCampus/>}/>
 
      </Routes>
      </BrowserRouter>
