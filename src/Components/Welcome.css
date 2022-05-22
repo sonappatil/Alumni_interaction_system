@@ -26,5 +26,6 @@
     width:600px;
     height:370px;
     margin-top:50px;
-    margin-right:-117px;
+    /* margin-right:-117px; */
+    margin-left: 2px;
 }
