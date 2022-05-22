@@ -31,7 +31,7 @@ function PlacedStudentsCivil() {
     <NavbarForDept />
 
     <center>
-      <h2>Civil Department</h2>
+      <h2 id='heading'>Civil Department</h2>
     <div>
       <input className='search-box' value={text} onChange={(e) => settext(e.target.value)} type="text" placeholder='search...' />
     </div>

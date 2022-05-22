@@ -1,47 +1,27 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './Steps.css';
+
 
 function Steps() {
-  const style={
-   style1:{
-    backgroundColor:'cyan',
-    width:'350px',
-    height:'200px',
-    padding:'48px',
-    margin:'70px',
-    borderRadius:'20px'
-   },
-   style2:{
-     marginBottom:'70px',
-     display:'flex',
-     marginTop:'100px'
-   }
-  }
+  
   return (
     <div>
-        <div style={style.style2}>
-        
-        <div style={style.style1}>
-        <Link to='/it'><h2>Search for an Alumni</h2></Link>
-        </div>
-        
-        <div style={style.style1}>
-           <Link to='/placementdrives'><h2>Check for placement drives</h2></Link>
-        </div>
-        <div style={style.style1}>
-           <Link to='/alumniinfo'>
-              <h2>Are you an Alumni ?
-                Give us some details
-              </h2>
-           </Link>
-        </div>
-        <div style={style.style1}>
-           <Link to='/offcampus'>
-              <h2>off campus students
-              </h2>
-           </Link>
-        </div>
-        </div>
+       <div id='steps-wrapper'>
+          <div>
+             <h3>Search for an Alumni</h3>
+             <p>Search for Alumni where he/she got placed , their package , in which year they got placed and reachout to them using their LinkedIn Profile</p>
+          </div>
+          <div>
+             <h4>Check for Placement Drives</h4>
+             <p>Check for the companies coming to campus , Register for the same using google form link provided and get ready for Placements</p>
+          </div>
+          <div>
+             <h4>You got Placed OffCampus?</h4>
+             <p>Provide some details about the company you got placed in</p>
+          </div>
+          <div></div>
+       </div>
     </div>
   )
 }

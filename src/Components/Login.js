@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Login.css'
 import { logOut } from '../Firebase'
+import NavHome from './NavHome'
 
 function Login() {
 
@@ -15,6 +16,7 @@ function Login() {
   }
   return (
     <div >
+      <NavHome/>
         <center>
           
             <div id='main-div'>

@@ -3,6 +3,7 @@ import './Login.css'
 import { useState } from 'react';
 import {addDoc,collection} from 'firebase/firestore';
 import {db} from '../Firebase'
+import NavHome from './NavHome';
 
 function AlumniInfo() {
 const [name, setname] = useState('');
@@ -37,6 +38,7 @@ const uploadClickHandler = async() => {
 
   return (
     <div >
+        <NavHome/>
         <center>
             <div id='main-div' style={{height:'600px'}}>
             <section className='input'>
