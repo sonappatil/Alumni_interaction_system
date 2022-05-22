@@ -1,4 +1,11 @@
-#navbar{
+/* .nav-bar {
+    height: 70px;
+    background-color: blue;
+
+} */
+
+ 
+ #navbar{
     background-color: #f0f6fc;
     padding: 8px;
     display: flex;
@@ -16,6 +23,7 @@ img{
     border-radius: 50%;
     margin-left: 10px;
     margin-bottom: 10px;
+    
 }
 .btn{
     background-color: #4f94d4;
