@@ -29,7 +29,7 @@ function Login() {
     <div >
       <NavHome/>
         <center>
-        
+        <div id='text-div'><h2 id='text'>Login Here...</h2></div>
             <div id='main-div'> 
             
             <section className='input'>

@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './Steps.css';
+
 
 function Steps() {
   const style={
@@ -19,29 +21,17 @@ function Steps() {
   }
   return (
     <div>
-        <div style={style.style2}>
-        
-        <div style={style.style1}>
-        <Link to='/it'><h2>Search for an Alumni</h2></Link>
-        </div>
-        
-        <div style={style.style1}>
-           <Link to='/placementdrives'><h2>Check for placement drives</h2></Link>
-        </div>
-        <div style={style.style1}>
-           <Link to='/alumniinfo'>
-              <h2>Are you an Alumni ?
-                Give us some details
-              </h2>
-           </Link>
-        </div>
-        <div style={style.style1}>
-           <Link to='/offcampus'>
-              <h2>off campus students
-              </h2>
-           </Link>
-        </div>
-        </div>
+       <div>
+          <div>
+             <h4>Search for an Alumni</h4>
+             <p>Search for an alumni of your choice , as per Department</p>
+          </div>
+          <div>
+             <h4></h4>
+          </div>
+          <div></div>
+          <div></div>
+       </div>
     </div>
   )
 }
