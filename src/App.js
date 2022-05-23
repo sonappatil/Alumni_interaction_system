@@ -38,9 +38,6 @@ function App() {
        <Route path='forgotpassword' element={<ForgotPass/>}/>
        <Route path='offcampus' element={<OffCampus/>}/>
        <Route path='dashboard' element={<Dashboard/>}/>
-       
-       
-
      </Routes>
      </BrowserRouter>
     </div>

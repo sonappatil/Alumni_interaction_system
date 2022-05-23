@@ -9,6 +9,9 @@ function Navbar() {
 
    
   return (
+    //   <nav className='nav-bar'>
+
+    //   </nav>
     <div>
         <div>
             <div id='navbar' >
