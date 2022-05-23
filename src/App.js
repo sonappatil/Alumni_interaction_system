@@ -25,7 +25,6 @@ function App() {
      <BrowserRouter>
      <Routes>
        <Route path='/' element={<Welcome/>}/>
-       <Route path='logedIn'  element={<Dashboard/>}/>
        <Route path='it' element={<PlacedStudentsIT/>}/>
        <Route path='civil' element={<PlacedStudentsCivil/>}/>
        <Route path='mech' element={<PlacedStudentsME/>}/>
@@ -38,6 +37,9 @@ function App() {
        <Route path='alumniinfo' element={<AlumniInfo/>}/>
        <Route path='forgotpassword' element={<ForgotPass/>}/>
        <Route path='offcampus' element={<OffCampus/>}/>
+       <Route path='dashboard' element={<Dashboard/>}/>
+       
+       
 
      </Routes>
      </BrowserRouter>

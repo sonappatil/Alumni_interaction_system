@@ -27,9 +27,9 @@ function PlacedStudentsIT() {
    inputstyle:{
      marginTop:'100px',
     padding:'12px 24px',
-    borderRadius:'20px',
+    borderRadius:'40px',
     width:'400px',
-    fontSize:'20px'
+    fontSize:'20px',
    },
    imagestyle:{
     width:'25px' , 
@@ -48,8 +48,9 @@ function PlacedStudentsIT() {
     <NavbarForDept dept='Information Technology'/>
 
     <center>
+      <h2>IT Department</h2>
     <div>
-      <input style={style.inputstyle} value={text} onChange={(e) => settext(e.target.value)} type="text" placeholder='search' />
+      <input style={style.inputstyle} value={text} onChange={(e) => settext(e.target.value)} type="text" placeholder='search...' />
     </div>
 
     

@@ -5,7 +5,8 @@
     margin-top: 100px;
     border-radius: 10px;
     box-shadow: 0px 2px 5px 2px grey;
-    padding:36px
+    padding:36px;
+    display: block;
    
 }
 .input{
@@ -22,5 +23,5 @@
     margin-bottom:10px;
     border-radius:3px;
     cursor:pointer;
-    text-decoration:none
+    text-decoration:none;
 }

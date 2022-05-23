@@ -23,33 +23,17 @@ function PlacedStudentsCivil() {
     getUsers();
   }, [])
 
-  const style ={
-   inputstyle:{
-     marginTop:'100px',
-    padding:'12px 24px',
-    borderRadius:'20px',
-    width:'400px',
-    fontSize:'20px'
-   },
-   imagestyle:{
-    width:'25px' , 
-    height:'25px',
-    position:'absolute',
-    left:'650px',
-    paddingLeft:'4px',
-    paddingTop:'10px'
-   }
-  }
   
 
   return (
     
     <>
-    <NavbarForDept dept='Civil'/>
+    <NavbarForDept />
 
     <center>
+      <h2>Civil Department</h2>
     <div>
-      <input style={style.inputstyle} value={text} onChange={(e) => settext(e.target.value)} type="text" placeholder='search...' />
+      <input className='search-box' value={text} onChange={(e) => settext(e.target.value)} type="text" placeholder='search...' />
     </div>
 
     

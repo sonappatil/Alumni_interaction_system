@@ -14,7 +14,13 @@ const [link, setlink] = useState()
 
 const uploadClickHandler = async() => {
 
-
+    setPackage('');
+    setcompany('');
+    setdept('');
+    setlink('');
+    setname('');
+    setsession('');
+    
     await addDoc(collection(db,'offCampus'),{
         Name:name,
         Package:Package,
@@ -23,6 +29,8 @@ const uploadClickHandler = async() => {
         dept:dept,
         Link:link
     })
+
+  
 }
 
 

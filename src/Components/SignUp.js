@@ -1,6 +1,9 @@
 import React, { useRef } from 'react'
 import './Login.css'
-import {signup , useAuth} from '../Firebase'
+import {signup , useAuth } from '../Firebase'
+import NavHome from './NavHome';
+import { Link } from 'react-router-dom';
+//import { addDoc, collection } from 'firebase/firestore';
 
 function SignUp() {
 
@@ -9,15 +12,16 @@ function SignUp() {
   const currentUser = useAuth();
 
   const handleSignUp = async() => {
-    
+    //emailRef.current.value='';
+   // passwordRef.current.value='';
       await signup(emailRef.current.value,passwordRef.current.value);
-
   }
   return (
     <div >
+      <NavHome/>
         <center>
             <div id='main-div'>
-            <section className='input'>
+            <section className='input' >
                 <div className="input-group mb-3 ">
                   <input ref={emailRef} type="email" className="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1"/>
                </div>
@@ -29,6 +33,7 @@ function SignUp() {
             </section>
             
             <button type="button" className="btn btn-info" onClick={handleSignUp}>SignUp</button>
+            <p>Already have an account? <Link to='/login'>SignIn</Link></p>
             </div>
         </center>
     </div>

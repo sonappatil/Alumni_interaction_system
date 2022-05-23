@@ -48,6 +48,7 @@ function PlacedStudentsME() {
     <NavbarForDept dept='Mechanical'/>
 
     <center>
+      <h2>Mechanical Department</h2>
     <div>
       <input style={style.inputstyle} value={text} onChange={(e) => settext(e.target.value)} type="text" placeholder='search' />
     </div>
