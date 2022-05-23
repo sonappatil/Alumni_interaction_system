@@ -4,32 +4,22 @@ import './Steps.css';
 
 
 function Steps() {
-  const style={
-   style1:{
-    backgroundColor:'cyan',
-    width:'350px',
-    height:'200px',
-    padding:'48px',
-    margin:'70px',
-    borderRadius:'20px'
-   },
-   style2:{
-     marginBottom:'70px',
-     display:'flex',
-     marginTop:'100px'
-   }
-  }
+  
   return (
     <div>
-       <div>
+       <div id='steps-wrapper'>
           <div>
-             <h4>Search for an Alumni</h4>
-             <p>Search for an alumni of your choice , as per Department</p>
+             <h3>Search for an Alumni</h3>
+             <p>Search for Alumni where he/she got placed , their package , in which year they got placed and reachout to them using their LinkedIn Profile</p>
           </div>
           <div>
-             <h4></h4>
+             <h4>Check for Placement Drives</h4>
+             <p>Check for the companies coming to campus , Register for the same using google form link provided and get ready for Placements</p>
           </div>
-          <div></div>
+          <div>
+             <h4>You got Placed OffCampus?</h4>
+             <p>Provide some details about the company you got placed in</p>
+          </div>
           <div></div>
        </div>
     </div>
