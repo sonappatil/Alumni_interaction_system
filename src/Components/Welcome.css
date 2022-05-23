@@ -1,31 +1,32 @@
-#main-div{
+.main-div{
     display: flex;
     justify-content: space-between;
+    margin: 100px;
 }
 .btn{
     border:none;
-    background-color:#135e96;
+    background-color:#13963c;
     color:white;
     padding:16px 38px;
     font-size:16px;
     border-radius:10px;
     cursor:pointer;
 }
-#subtext{
-    font-size:22px;
+.subtext{
+    font-size:20px;
     margin-top:38px;
     margin-bottom:38px;
 }
-#text{
-    font-size:68px;
+.text{
+    font-size:58px;
     font-weight:600;
     color:#4f94d4;
     text-overflow:clip;
 }
-#img{
+.img{
     width:600px;
     height:370px;
-    margin-top:50px;
-    /* margin-right:-117px; */
-    margin-left: 2px;
+    margin-top:-655px;
+    margin-left:700px;
+    
 }

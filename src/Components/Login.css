@@ -25,3 +25,9 @@
     cursor:pointer;
     text-decoration:none;
 }
+#text-div{
+    margin-top: 100px;
+}
+#text{
+    font-style: none;
+}
