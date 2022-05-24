@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import './Login.css'
-import { logOut } from '../Firebase'
+import { logOut, signIn } from '../Firebase'
 import NavHome from './NavHome'
 
+
 function Login() {
+  const emailRef = useRef();
+  const passRef = useRef();
+
 
   const handleLogOut = async() => {
     try{
@@ -14,6 +18,14 @@ function Login() {
       alert(error.message);
     }
   }
+  const handleLogIn = async() => {
+    try{
+      await signIn(emailRef.current.value , passRef.current.value)
+    }
+    catch(error){
+      alert(error.message)
+    }
+  } 
   return (
     <div >
       <NavHome/>
@@ -35,7 +47,7 @@ function Login() {
                 <Link to="/forgotpassword">Forgot Password?</Link>
             </div>
 
-            <button type="button" className="btn btn-info">Log In</button>
+            <button type="button" className="btn btn-info" onClick={handleLogIn} >Log In</button>
 
             <button type="button" onClick={handleLogOut} className="btn btn-info">Log out</button>
             </div>

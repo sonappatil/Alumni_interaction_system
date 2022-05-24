@@ -1,10 +1,12 @@
 import React from 'react'
 
 import './Login.css'
+import NavHome from './NavHome'
 
 function ForgotPass() {
   return (
     <div >
+      <NavHome/>
         <center>
             <div id='main-div' style={{height:'300px'}}>
             <section className='input'>
