@@ -20,7 +20,8 @@ function SignUp() {
     <div >
       <NavHome/>
         <center>
-            <div id='main-div'>
+          <h1 class="login">SignUp Here...</h1>
+            <div id='main-div' style={{height:'330px'}}>
             <section className='input' >
                 <div className="input-group mb-3 ">
                   <input ref={emailRef} type="email" className="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1"/>

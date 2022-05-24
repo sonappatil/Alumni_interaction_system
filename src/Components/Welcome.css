@@ -1,32 +1,32 @@
 .main-div{
     display: flex;
     justify-content: space-between;
-    margin: 100px;
+    margin: 145px;
 }
 .btn{
     border:none;
     background-color:#13963c;
     color:white;
     padding:16px 38px;
-    font-size:16px;
+    font-size:18px;
     border-radius:10px;
     cursor:pointer;
 }
 .subtext{
-    font-size:20px;
+    font-size:22px;
     margin-top:38px;
-    margin-bottom:38px;
+    margin-bottom:35px;
 }
 .text{
-    font-size:58px;
+    font-size:70px;
     font-weight:600;
-    color:#4f94d4;
+    color:#1e73c3;
     text-overflow:clip;
 }
 .img{
-    width:600px;
-    height:370px;
-    margin-top:-655px;
-    margin-left:700px;
-    
+    width:850px;
+    height:570px;
+    margin-top:-670px;
+    margin-left:900px;
+    /* border: 2px solid black; */
 }
