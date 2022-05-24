@@ -13,6 +13,7 @@ function Login() {
   const handleLogOut = async() => {
     try{
       await logOut();
+      alert('Logged out Successfully!!!')
     }
     catch(error){
       alert(error.message);
@@ -20,7 +21,8 @@ function Login() {
   }
   const handleLogIn = async() => {
     try{
-      await signIn(emailRef.current.value , passRef.current.value)
+      await signIn(emailRef.current.value , passRef.current.value);
+      alert('Logged In sucessfully!!')
     }
     catch(error){
       alert(error.message)
@@ -49,7 +51,7 @@ function Login() {
 
             <button type="button" className="btn btn-info" onClick={handleLogIn} >Log In</button>
 
-            {/* <button type="button" onClick={handleLogOut} className="btn btn-info">Log out</button> */}
+             <button type="button" onClick={handleLogOut} className="btn btn-info">Log out</button> 
             </div>
         </center>
     </div>

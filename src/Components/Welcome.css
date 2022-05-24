@@ -1,7 +1,8 @@
 .main-div{
     display: flex;
+    max-width: 900px;
     justify-content: space-between;
-    margin: 145px;
+    padding:114px;
 }
 .btn{
     border:none;
@@ -27,6 +28,6 @@
     width:850px;
     height:570px;
     margin-top:-670px;
-    margin-left:900px;
+    margin-left:800px;
     /* border: 2px solid black; */
 }

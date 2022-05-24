@@ -15,6 +15,7 @@ function SignUp() {
     //emailRef.current.value='';
    // passwordRef.current.value='';
       await signup(emailRef.current.value,passwordRef.current.value);
+      alert('Registered successfully!!')
   }
   return (
     <div >
