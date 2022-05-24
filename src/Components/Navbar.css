@@ -6,7 +6,7 @@
 
  
  #navbar{
-    background-color: #f0f6fc;
+     background-color:aliceblue ;/*#f0f6fc */
     padding: 8px;
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,7 @@ img{
     margin-right:28px;
     margin-top:10px;
     margin-bottom:10px;
-    border-radius:10px;
+    border-radius:30px;
     cursor:pointer;
     text-decoration: none;
 }
