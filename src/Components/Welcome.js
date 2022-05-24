@@ -7,7 +7,7 @@ import { useAuth } from '../Firebase';
 
 
 function Home() {
-  const currentUser = useAuth();
+  const currentuser = useAuth();
     // const myStyle ={
     //     image:{
     //         width:'600px',
@@ -37,19 +37,23 @@ function Home() {
     //     }
     // }
     return (
-        <>
+        <div style={{heigth:'100vh'}}>
             <Navbar />
             <div class="main-div">
-                <div style={{ width: '661px' }}>
+                <div style={{ width: '600px' }}>
                     <h3 class="text">Introducing Interaction Portal of TGPCET!!</h3>
                     <p class="subtext">Search for the Alumni respectiveto their departments and reach out to them, also get updates of upcoming Placements Drives.</p>
-                    <Link to="/dashboard"><button class="btn" disabled={currentUser ? false : true}> Get Started</button></Link>
+                    <Link to="/dashboard"><button class="btn" disabled={currentuser ? false : true} > Get Started</button></Link>
                 </div>
             </div>
             <div>
                 <img class="img" src={Interaction} alt="interaction-img" />
             </div>
-        </>
+
+            <footer>
+              <p style={{textAlign:'center', backgroundColor:'black',color:'white',height:'50px',marginBottom:'0'}}>Note: You need to SignIn in order to enable "Get Started" button .</p>
+            </footer>
+        </div>
     )
 }
 

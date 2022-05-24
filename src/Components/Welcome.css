@@ -1,8 +1,7 @@
 .main-div{
     display: flex;
-    max-width: 900px;
     justify-content: space-between;
-    padding:114px;
+    margin:145px;
 }
 .btn{
     border:none;
@@ -25,13 +24,9 @@
     text-overflow:clip;
 }
 .img{
-    width:850px;
+    width:700px;
     height:570px;
-    margin-top:-670px;
+    margin-top:-750px;
     margin-left:800px;
-<<<<<<< HEAD
     /* border: 2px solid black; */
-=======
-
->>>>>>> 87fb88478e62f2e00bb89f3b0d801bfe485e04eb
 }
