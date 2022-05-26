@@ -13,7 +13,7 @@ function NavHome(props) {
             </div>
 
            <div>
-             <Link to='/'><button className='btn'>Back</button></Link>
+             <Link to={`/${props.path}`}><button className='btn'>Back</button></Link>
            </div>
            
         </div>

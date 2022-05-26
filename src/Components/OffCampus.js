@@ -3,6 +3,7 @@ import './PlacedStudents.css'
 import { db } from '../Firebase'
 import { collection , getDocs } from 'firebase/firestore'
 import NavbarForOffCampus from './NavbarForOffCampus';
+import NavHome from './NavHome';
 //import search_icon from '../Images/search_icon.png'
 
 function OffCampus() {
@@ -45,7 +46,7 @@ function OffCampus() {
   return (
     
     <>
-    <NavbarForOffCampus/>
+    <NavHome path='dashboard'/>
 
     <center>
     <div>

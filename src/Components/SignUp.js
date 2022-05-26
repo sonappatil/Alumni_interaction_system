@@ -34,7 +34,7 @@ function SignUp() {
             </div>
             </section>
             
-            <button type="button" className="btn btn-info" onClick={handleSignUp}>SignUp</button>
+            <button type="button" className="btn btn-info" onClick={handleSignUp} >SignUp</button>
             <p>Already have an account? <Link to='/login'>SignIn</Link></p>
             </div>
         </center>

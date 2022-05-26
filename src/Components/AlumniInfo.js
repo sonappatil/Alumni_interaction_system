@@ -31,6 +31,8 @@ const uploadClickHandler = async() => {
         Link:link
     })
 
+    alert('Uploaded details successfully!! you can check it in offCampus section');
+
   
 }
 
