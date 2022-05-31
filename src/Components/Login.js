@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import './Login.css'
 import { logOut, signIn } from '../Firebase'
 import NavHome from './NavHome'
@@ -22,7 +22,8 @@ function Login() {
   const handleLogIn = async() => {
     try{
       await signIn(emailRef.current.value , passRef.current.value);
-      alert('Logged In sucessfully!!')
+      alert('Logged In sucessfully!!');
+      //  <Navigate to='' replace={true}/>
     }
     catch(error){
       alert(error.message)
@@ -30,7 +31,7 @@ function Login() {
   } 
   return (
     <div >
-      <NavHome/>
+      <NavHome path=''/>
         <center>
           <h1 class="login">Login Here...</h1>
             <div id='main-div' style={{height:'300px'}}>
@@ -49,9 +50,9 @@ function Login() {
                 <Link to="/forgotpassword">Forgot Password?</Link>
             </div>
 
-            <button type="button" className="btn btn-info" onClick={handleLogIn} >Log In</button>
+            <button type="button" className="btn " onClick={handleLogIn} >Log In</button>
 
-             <button type="button" onClick={handleLogOut} className="btn btn-info">Log out</button> 
+             <button type="button" onClick={handleLogOut} className="btn ">Log out</button> 
             </div>
         </center>
     </div>

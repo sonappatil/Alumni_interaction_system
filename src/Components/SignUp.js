@@ -19,7 +19,7 @@ function SignUp() {
   }
   return (
     <div >
-      <NavHome/>
+      <NavHome path=''/>
         <center>
           <h1 class="login">SignUp Here...</h1>
             <div id='main-div' style={{height:'330px'}}>

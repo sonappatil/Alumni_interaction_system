@@ -35,3 +35,20 @@
 .continue-btn:hover{
 background-color:lightskyblue;
 }
+#text{
+    margin-bottom: 90px;
+}
+@media(max-width:900px){
+    #steps-wrapper{
+        flex-direction: column;
+        padding: 16px;
+    
+    }
+    .steps-class{
+        width: 90%;
+       
+    }
+    .steps-class:last-of-type{
+        margin-bottom: 20px;
+    }
+}

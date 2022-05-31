@@ -40,7 +40,7 @@ const uploadClickHandler = async() => {
 
   return (
     <div >
-        <NavHome/>
+        <NavHome path='dashboard'/>
         <center>
             <h1 class="login">Provide Your Details Here...</h1>
             <div id='main-div' style={{height:'530px'}}>
