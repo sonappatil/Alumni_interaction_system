@@ -48,8 +48,16 @@ function PlacedStudentsEE() {
     <NavbarForDept dept='Electrical'/>
 
     <center>
-    <div>
-      <input style={style.inputstyle} value={text} onChange={(e) => settext(e.target.value)} type="text" placeholder='search' />
+      <div className='header-ee'>
+     <h1>Electrical Department </h1>
+      </div>
+    <div className='search-bar'>
+      <input 
+      className='search-input'
+      value={text} 
+      onChange={(e) => settext(e.target.value)} 
+      type="text" 
+      placeholder='search' />
     </div>
 
     

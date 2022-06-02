@@ -31,10 +31,18 @@ function PlacedStudentsCivil() {
     <NavbarForDept />
 
     <center>
-      <h2 id='heading'>Civil Department</h2>
-    <div>
-      <input className='search-box' value={text} onChange={(e) => settext(e.target.value)} type="text" placeholder='search...' />
-    </div>
+      <div className='header-civil'>
+      <h1>Civil Department</h1>
+      </div>
+      <div className='search-bar'>
+      <input
+      className='search-input'
+      type="text"
+      value={text}
+      placeholder="Search..."
+      onChange={e => settext(e.target.value)}
+      />
+      </div>
 
     
    
