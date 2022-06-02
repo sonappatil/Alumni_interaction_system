@@ -46,10 +46,18 @@ function PlacedStudentsCSE() {
     
     <>
     <NavbarForDept dept='Computer Science and Engineering'/>
-
-    <center>
-    <div>
-      <input style={style.inputstyle} value={text} onChange={(e) => {settext(e.target.value)}} type="text" placeholder='search' />
+ <center>
+   <div className='header-cse'>
+  <h1> Computer Science Department</h1>
+   </div>
+    <div className='search-bar'>
+      <input
+      className='search-input'
+      type="text"
+      value={text}
+      placeholder="Search..."
+      onChange={e => settext(e.target.value)}
+      />
     </div>
 
     
