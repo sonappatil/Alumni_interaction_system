@@ -2,6 +2,7 @@ import React,{useState , useEffect} from 'react'
 import NavbarForDept from './NavbarForDept'
 import {db} from '../Firebase'
 import {collection ,getDocs} from 'firebase/firestore'
+import NavHome from './NavHome';
 
 
 function PlacementDrives() {
@@ -36,7 +37,7 @@ function PlacementDrives() {
     }
   return (
     <div>
-        <NavbarForDept/>
+        <NavHome path='dashboard'/>
         <div style={{marginTop:'100px',padding:'20px'}}>
            {
                users.map((element)=>{

@@ -42,8 +42,8 @@ const uploadClickHandler = async() => {
     <div >
         <NavHome path='dashboard'/>
         <center>
-            <h1 class="login">Provide Your Details Here...</h1>
-            <div id='main-div' style={{height:'530px'}}>
+            <h1 class="login" style={{marginTop:"100px"}}>Provide Your Details Here...</h1>
+            <div id='main-div' style={{height:'500px' , marginTop:'25px'}}>
             <section className='input'>
                 <div className="input-group mb-3 ">
                   <input type="text" value={name} onChange={(e) => setname(e.target.value)} className="form-control" placeholder="Full Name" aria-label="Username" aria-describedby="basic-addon1"/>

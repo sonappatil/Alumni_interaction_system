@@ -1,13 +1,16 @@
-import React, { useRef } from 'react'
+import React, { useRef,useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import './Login.css'
 import { logOut, signIn } from '../Firebase'
 import NavHome from './NavHome'
+//import { useDispatch } from 'react-redux'
 
 
 function Login() {
+ 
   const emailRef = useRef();
   const passRef = useRef();
+ 
 
 
   const handleLogOut = async() => {
@@ -22,8 +25,10 @@ function Login() {
   const handleLogIn = async() => {
     try{
       await signIn(emailRef.current.value , passRef.current.value);
+      
       alert('Logged In sucessfully!!');
       //  <Navigate to='' replace={true}/>
+     
     }
     catch(error){
       alert(error.message)
@@ -35,6 +40,7 @@ function Login() {
         <center>
           <h1 class="login">Login Here...</h1>
             <div id='main-div' style={{height:'300px'}}>
+           
             <section className='input'>
                 <div className="input-group mb-3 ">
                   <input ref={emailRef} type="email" className="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1"/>
@@ -60,3 +66,4 @@ function Login() {
 }
 
 export default Login
+

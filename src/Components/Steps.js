@@ -6,7 +6,7 @@ import './Steps.css';
 function Steps() {
   
   return (
-    <div >
+    <div style={{marginTop:'50px'}}>
        <div id='steps-wrapper'>
           <div className='steps-class'>
              <h3 style={{marginBottom:'20px'}}>Search for an Alumni</h3>
