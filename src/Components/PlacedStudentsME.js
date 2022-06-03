@@ -10,6 +10,7 @@ function PlacedStudentsME() {
   const [users , setusers] = useState([]);
   const [text, settext] = useState('')
 
+  // handle change of text
   const handleChange = (e) => {
     e.preventDefault();
     settext(e.target.value);
