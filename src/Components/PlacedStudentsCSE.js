@@ -8,7 +8,12 @@ import NavbarForDept from './NavbarForDept';
 function PlacedStudentsCSE() {
   
   const [users , setusers] = useState([]);
-  const [text, settext] = useState('')
+  const [text, settext] = useState('');
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    settext(e.target.value);
+  }
 
   useEffect(() => {
     const getUsers = async() => {
@@ -56,7 +61,7 @@ function PlacedStudentsCSE() {
       type="text"
       value={text}
       placeholder="Search..."
-      onChange={e => settext(e.target.value)}
+      onChange={handleChange}
       />
     </div>
 
@@ -78,20 +83,11 @@ function PlacedStudentsCSE() {
             </thead>
             
             {
-              users.filter((val) => {
-                if(text === ''){
-                    return val;
-                }
-                else if(val.Name.toLowerCase().includes(text.toLowerCase()) ||
-                val.company.toLowerCase().includes(text.toLowerCase()) ||
-                val.session.toLowerCase().includes(text.toLowerCase()) ||
-                val.Package.toLowerCase().includes(text.toLowerCase()) ||
-                val.dept.toLowerCase().includes(text.toLowerCase())
-                ){
-                    return val;
-                }
-                return 0;
-               }).map((user)=>{
+               users.filter(
+                (user) => user.Name.toLowerCase().includes(text.toLowerCase()) ||
+                user.company.toLowerCase().includes(text.toLowerCase()) ||
+                user.Package.toString().includes(text)
+                ).map((user)=>{
                 return(
                     <tr key={user.id}>
                         <td>{user.Name}</td>
