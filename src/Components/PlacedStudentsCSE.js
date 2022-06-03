@@ -69,9 +69,10 @@ function PlacedStudentsCSE() {
               
             <thead>
             <tr>
-                <th>Name</th>
+                <th style={{width:'290px'}}>Name</th>
                 <th>Company</th>
                 <th>Package</th>
+                <th>Designation</th>
                 <th>Session</th>
                 <th>LinkedIn Profile</th>
             </tr>
@@ -97,8 +98,9 @@ function PlacedStudentsCSE() {
                         <td>{user.Name}</td>
                         <td>{user.company}</td>
                         <td>{user.Package}</td>
+                        <td>{user.designation}</td>
                         <td>{user.session}</td>
-                        <td><a href={`https://www.linkedin.com/in/${user.Link}/`}>Profile Link</a></td>
+                        <td><a href={`https://${user.Link}`}>Profile Link</a></td>
                      </tr>
                   
                 )

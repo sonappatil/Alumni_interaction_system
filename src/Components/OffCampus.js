@@ -62,9 +62,10 @@ function OffCampus() {
               
             <thead>
             <tr>
-                <th>Name</th>
+                <th style={{width:'290px'}}>Name</th>
                 <th>Company</th>
                 <th>Package</th>
+                <th>Designation</th>
                 <th>Department</th>
                 <th>Session</th>
                 <th>LinkedIn Profile</th>
@@ -91,6 +92,7 @@ function OffCampus() {
                         <td>{user.Name}</td>
                         <td>{user.company}</td>
                         <td>{user.Package}</td>
+                        <td>{user.designation}</td>
                         <td>{user.dept}</td>
                         <td>{user.session}</td>
                         <td><a href={`https://${user.Link}`}>Profile Link</a></td>

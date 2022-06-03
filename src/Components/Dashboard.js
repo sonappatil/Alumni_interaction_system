@@ -7,7 +7,7 @@ function Dashboard() {
   return (
     <>
     <NavHome path=''/>
-    <div style={{marginTop:'120px'}}>
+    <div style={{marginTop:'110px'}}>
        <center> <h2 id='text' style={{color:'#4f94d4',fontSize:'48px'}}>Welcome !!  <br/> We are Glad that you are here.</h2></center>
     </div>
     <Steps/>

@@ -53,10 +53,11 @@ function PlacedStudentsCivil() {
               
             <thead>
             <tr>
-                <th>Name</th>
+                <th style={{width:'290px'}}>Name</th>
                 <th>Company</th>
                 <th>Package</th>
-                <th>Session</th>
+                <th>Designation</th>
+               
                 <th>LinkedIn Profile</th>
             </tr>
             </thead>
@@ -70,7 +71,8 @@ function PlacedStudentsCivil() {
                 val.company.toLowerCase().includes(text.toLowerCase()) ||
                 val.session.toLowerCase().includes(text.toLowerCase()) ||
                 val.Package.toLowerCase().includes(text.toLowerCase()) ||
-                val.dept.toLowerCase().includes(text.toLowerCase())
+                val.dept.toLowerCase().includes(text.toLowerCase())||
+                val.designation.toLowerCase().includes(text.toLowerCase())
                 ){
                     return val;
                 }
@@ -81,8 +83,9 @@ function PlacedStudentsCivil() {
                         <td>{user.Name}</td>
                         <td>{user.company}</td>
                         <td>{user.Package}</td>
-                        <td>{user.session}</td>
-                        <td><a href={`https://www.linkedin.com/in/${user.Link}/`}>Profile Link</a></td>
+                        <td>{user.designation}</td>
+                        
+                        <td><a href={`https://${user.Link}`}>Profile Link</a></td>
                      </tr>
                   
                 )

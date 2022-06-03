@@ -70,9 +70,10 @@ function PlacedStudentsIT() {
 
             <thead>
               <tr>
-                <th>Name</th>
+                <th style={{width:'290px'}}>Name</th>
                 <th>Company</th>
                 <th>Package</th>
+                <th>Designation</th>
                 <th>Session</th>
                 <th>LinkedIn Profile</th>
               </tr>
@@ -85,7 +86,7 @@ function PlacedStudentsIT() {
                 }
                 else if (val.Name.toLowerCase().includes(text.toLowerCase()) ||
                   val.company.toLowerCase().includes(text.toLowerCase()) ||
-                  val.session.toLowerCase().includes(text.toLowerCase()) ||
+                  val.designation.toLowerCase().includes(text.toLowerCase()) ||
                   val.Package.toLowerCase().includes(text.toLowerCase()) ||
                   val.dept.toLowerCase().includes(text.toLowerCase())
                 ) {
@@ -98,8 +99,9 @@ function PlacedStudentsIT() {
                     <td>{user.Name}</td>
                     <td>{user.company}</td>
                     <td>{user.Package}</td>
+                    <td>{user.designation}</td>
                     <td>{user.session}</td>
-                    <td><a href={`https://www.linkedin.com/in/${user.Link}/`}>Profile Link</a></td>
+                    <td><a href={`https://${user.Link}`}>Profile Link</a></td>
                   </tr>
 
                 )
