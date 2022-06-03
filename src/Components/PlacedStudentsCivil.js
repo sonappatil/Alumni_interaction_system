@@ -10,6 +10,12 @@ function PlacedStudentsCivil() {
   const [users , setusers] = useState([]);
   const [text, settext] = useState('')
 
+  const handleChange = (e) => {
+    e.preventDefault();
+    settext(e.target.value);
+  }
+
+
   useEffect(() => {
     const getUsers = async() => {
       const userCollectionRef = collection(db,"campusCivil");
@@ -17,19 +23,16 @@ function PlacedStudentsCivil() {
       setusers(
         data.docs.map((doc) => ({
           ...doc.data(),id:doc.id
-        }) )
+        }))
       )
     }
     getUsers();
   }, [])
 
-  
-
   return (
-    
     <>
     <NavbarForDept />
-
+    
     <center>
       <div className='header-civil'>
       <h1>Civil Department</h1>
@@ -40,7 +43,7 @@ function PlacedStudentsCivil() {
       type="text"
       value={text}
       placeholder="Search..."
-      onChange={e => settext(e.target.value)}
+      onChange={handleChange}
       />
       </div>
 
@@ -48,7 +51,6 @@ function PlacedStudentsCivil() {
    
     <div style={{marginTop:'50px'}}>
       
-       
            <table >
               
             <thead>
@@ -61,8 +63,11 @@ function PlacedStudentsCivil() {
                 <th>LinkedIn Profile</th>
             </tr>
             </thead>
-            
+            <tbody>
+              
+
             {
+<<<<<<< HEAD
               users.filter((val) => {
                 if(text === ''){
                     return val;
@@ -78,23 +83,38 @@ function PlacedStudentsCivil() {
                 }
                 return 0;
                }).map((user)=>{
+=======
+              users.filter(
+                (user) => user.Name.toLowerCase().includes(text.toLowerCase()) ||
+                user.company.toLowerCase().includes(text.toLowerCase()) ||
+                user.Package.toString().includes(text)
+                ).map((user)=>{
+>>>>>>> 5df660b9710c214ec83e1744f07e2515dd4275d4
                 return(
                     <tr key={user.id}>
                         <td>{user.Name}</td>
                         <td>{user.company}</td>
                         <td>{user.Package}</td>
+<<<<<<< HEAD
                         <td>{user.designation}</td>
                         
                         <td><a href={`https://${user.Link}`}>Profile Link</a></td>
+=======
+                        <td>{user.dept}</td>
+                        <td>{user.session}</td>
+                        <td>
+                          <a href={`https://www.linkedin.com/in/${user.Link}/`}>Profile Link</a>
+                        </td>
+>>>>>>> 5df660b9710c214ec83e1744f07e2515dd4275d4
                      </tr>
-                  
                 )
               })
-            }
-          
+            }   
+          </tbody>
         </table>
       
        </div>
+      
     </center>
     </>
   )

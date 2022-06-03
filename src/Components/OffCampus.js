@@ -11,6 +11,11 @@ function OffCampus() {
   const [users , setusers] = useState([]);
   const [text, settext] = useState('')
 
+  const handleChange = (e) => {
+    e.preventDefault();
+    settext(e.target.value);
+  }
+
   useEffect(() => {
     const getUsers = async() => {
       const userCollectionRef = collection(db,"offCampus");
@@ -50,11 +55,9 @@ function OffCampus() {
 
     <center>
     <div>
-      <input style={style.inputstyle} value={text} onChange={(e) => settext(e.target.value)} type="text" placeholder='search...' />
+      <input style={style.inputstyle} value={text} onChange={handleChange} type="text" placeholder='search...' />
     </div>
 
-    
-   
     <div style={{marginTop:'50px'}}>
       
        
@@ -71,7 +74,7 @@ function OffCampus() {
                 <th>LinkedIn Profile</th>
             </tr>
             </thead>
-            
+            <tbody>
             {
               users.filter((val) => {
                   if(text === ''){
@@ -101,6 +104,7 @@ function OffCampus() {
                 )
               })
             }
+             </tbody>
           
         </table>
       

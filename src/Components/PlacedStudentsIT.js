@@ -10,6 +10,11 @@ function PlacedStudentsIT() {
   const [users, setusers] = useState([]);
   const [text, settext] = useState('')
 
+  const handleChange = (e) => {
+    e.preventDefault();
+    settext(e.target.value);
+  }
+
   useEffect(() => {
     const getUsers = async () => {
       const userCollectionRef = collection(db, "onCampus");
@@ -57,7 +62,7 @@ function PlacedStudentsIT() {
               type="text"
               value={text}
               placeholder="Search..."
-              onChange={e => settext(e.target.value)}
+              onChange={handleChange}
             />
           </div>
         
@@ -80,6 +85,7 @@ function PlacedStudentsIT() {
             </thead>
 
             {
+<<<<<<< HEAD
               users.filter((val) => {
                 if (text === '') {
                   return val;
@@ -94,6 +100,13 @@ function PlacedStudentsIT() {
                 }
                 return 0;
               }).map((user) => {
+=======
+               users.filter(
+                (user) => user.Name.toLowerCase().includes(text.toLowerCase()) ||
+                user.company.toLowerCase().includes(text.toLowerCase()) ||
+                user.Package.toString().includes(text)
+                ).map((user) => {
+>>>>>>> 5df660b9710c214ec83e1744f07e2515dd4275d4
                 return (
                   <tr key={user.id}>
                     <td>{user.Name}</td>

@@ -10,6 +10,12 @@ function PlacedStudentsME() {
   const [users , setusers] = useState([]);
   const [text, settext] = useState('')
 
+  // handle change of text
+  const handleChange = (e) => {
+    e.preventDefault();
+    settext(e.target.value);
+  }
+
   useEffect(() => {
     const getUsers = async() => {
       const userCollectionRef = collection(db,"campusMech");
@@ -55,7 +61,7 @@ function PlacedStudentsME() {
       <input
       className='search-input'
       value={text} 
-      onChange={(e) => settext(e.target.value)}
+      onChange={handleChange}
        type="text"
         placeholder='Search...' />
     </div>
@@ -77,8 +83,8 @@ function PlacedStudentsME() {
                 <th>LinkedIn Profile</th>
             </tr>
             </thead>
-            
             {
+<<<<<<< HEAD
               users.filter((val) => {
                 if(text === ''){
                     return val;
@@ -92,22 +98,34 @@ function PlacedStudentsME() {
                 }
                 return 0;
                }).map((user)=>{
+=======
+              users.filter(
+                (user) => user.Name.toLowerCase().includes(text.toLowerCase()) ||
+                user.company.toLowerCase().includes(text.toLowerCase()) ||
+                user.Package.toString().includes(text)
+                )
+               .map((user)=>{
+>>>>>>> 5df660b9710c214ec83e1744f07e2515dd4275d4
                 return(
                     <tr key={user.id}>
                         <td>{user.Name}</td>
                         <td>{user.company}</td>
                         <td>{user.Package}</td>
+<<<<<<< HEAD
                         <td>{user.designation}</td>
                        
                         <td><a href={`https://${user.Link}`}>Profile Link</a></td>
                      </tr>
                   
+=======
+                        <td>{user.session}</td>
+                        <td><a href={`https://www.linkedin.com/in/${user.Link}/`}>Profile Link</a></td>
+                     </tr> 
+>>>>>>> 5df660b9710c214ec83e1744f07e2515dd4275d4
                 )
               })
             }
-          
         </table>
-      
        </div>
     </center>
     </>
