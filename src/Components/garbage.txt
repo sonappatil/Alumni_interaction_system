@@ -8,3 +8,28 @@
             <img style={myStyle.image} src={Interaction} alt="interaction-img" />
         </div>
     </div>
+
+
+
+
+     users.map((element)=>{
+                   return(
+                   <div key={element.id} style={{display:'flex',justifyContent:'space-between',}}>
+                        <h3>{element.company}</h3>
+                         
+                   </div>
+                   )
+               })
+
+
+
+                await addDoc(collection(db,'offCampus'),{
+        Name:name,
+        Package:Package,
+        session:session,
+        company:company,
+        dept:dept,
+        Link:link
+         })
+
+          alert('Uploaded details successfully!! you can check it in offCampus section');

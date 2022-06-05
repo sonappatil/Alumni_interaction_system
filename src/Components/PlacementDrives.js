@@ -1,5 +1,5 @@
 import React,{useState , useEffect} from 'react'
-import NavbarForDept from './NavbarForDept'
+
 import {db} from '../Firebase'
 import {collection ,getDocs} from 'firebase/firestore'
 import NavHome from './NavHome';
@@ -38,17 +38,33 @@ function PlacementDrives() {
   return (
     <div>
         <NavHome path='dashboard'/>
-        <div style={{marginTop:'100px',padding:'20px'}}>
+        <div style={{marginTop:'100px'}}>
+        <center>
+          <table>
+          <thead>
+            <th>Name of Company</th>
+            <th>Date</th>
+            <th>Designation</th>
+            <th>Package</th>
+            <th>Register</th>
+          </thead>
+          <tbody>
            {
-               users.map((element)=>{
-                   return(
-                   <div key={element.id} style={{display:'flex',justifyContent:'space-between',}}>
-                        <h3>{element.company}</h3>
-                         <button style={mystyle}>Register</button>
-                   </div>
-                   )
-               })
+             users.map((element) => {
+               return(
+                <tr>
+                    <td>{element.company}</td>
+                    <td>{element.date}</td>
+                    <td>{element.designation}</td>
+                    <td>{element.Package}</td>
+                    <td><button style={mystyle}>Register</button></td>
+              </tr>
+               )
+             })
            }
+          </tbody>
+        </table>
+        </center>
         </div>
     </div>
   )

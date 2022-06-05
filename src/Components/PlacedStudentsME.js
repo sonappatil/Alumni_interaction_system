@@ -29,23 +29,6 @@ function PlacedStudentsME() {
     getUsers();
   }, [])
 
-  const style ={
-   inputstyle:{
-     marginTop:'100px',
-    padding:'12px 24px',
-    borderRadius:'20px',
-    width:'400px',
-    fontSize:'20px'
-   },
-   imagestyle:{
-    width:'25px' , 
-    height:'25px',
-    position:'absolute',
-    left:'650px',
-    paddingLeft:'4px',
-    paddingTop:'10px'
-   }
-  }
   
 
   return (
@@ -79,49 +62,24 @@ function PlacedStudentsME() {
                 <th>Company</th>
                 <th>Package</th>
                 <th>Designation</th>
-                
                 <th>LinkedIn Profile</th>
             </tr>
             </thead>
             {
-<<<<<<< HEAD
-              users.filter((val) => {
-                if(text === ''){
-                    return val;
-                }
-                else if(val.Name.toLowerCase().includes(text.toLowerCase()) ||
-                val.company.toLowerCase().includes(text.toLowerCase()) ||
-                val.Package.toLowerCase().includes(text.toLowerCase()) ||
-                val.dept.toLowerCase().includes(text.toLowerCase())
-                ){
-                    return val;
-                }
-                return 0;
-               }).map((user)=>{
-=======
               users.filter(
                 (user) => user.Name.toLowerCase().includes(text.toLowerCase()) ||
                 user.company.toLowerCase().includes(text.toLowerCase()) ||
                 user.Package.toString().includes(text)
                 )
                .map((user)=>{
->>>>>>> 5df660b9710c214ec83e1744f07e2515dd4275d4
                 return(
                     <tr key={user.id}>
                         <td>{user.Name}</td>
                         <td>{user.company}</td>
                         <td>{user.Package}</td>
-<<<<<<< HEAD
                         <td>{user.designation}</td>
-                       
-                        <td><a href={`https://${user.Link}`}>Profile Link</a></td>
-                     </tr>
-                  
-=======
-                        <td>{user.session}</td>
-                        <td><a href={`https://www.linkedin.com/in/${user.Link}/`}>Profile Link</a></td>
+                        <td><a target='_blank' href={`https://${user.Link}`}>Profile Link</a></td>
                      </tr> 
->>>>>>> 5df660b9710c214ec83e1744f07e2515dd4275d4
                 )
               })
             }

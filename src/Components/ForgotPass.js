@@ -19,7 +19,7 @@ e.preventDefault()
     <div >
       <NavHome path=''/>
         <center>
-          <h1 class="login">New Password Here... </h1>
+          <h1 className="login">New Password Here... </h1>
             <div id='main-div' style={{height:'300px'}}>
             <section className='input'>
                 <div className="input-group mb-3 ">

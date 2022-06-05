@@ -59,7 +59,6 @@ function PlacedStudentsCivil() {
                 <th>Company</th>
                 <th>Package</th>
                 <th>Designation</th>
-               
                 <th>LinkedIn Profile</th>
             </tr>
             </thead>
@@ -67,45 +66,20 @@ function PlacedStudentsCivil() {
               
 
             {
-<<<<<<< HEAD
-              users.filter((val) => {
-                if(text === ''){
-                    return val;
-                }
-                else if(val.Name.toLowerCase().includes(text.toLowerCase()) ||
-                val.company.toLowerCase().includes(text.toLowerCase()) ||
-                val.session.toLowerCase().includes(text.toLowerCase()) ||
-                val.Package.toLowerCase().includes(text.toLowerCase()) ||
-                val.dept.toLowerCase().includes(text.toLowerCase())||
-                val.designation.toLowerCase().includes(text.toLowerCase())
-                ){
-                    return val;
-                }
-                return 0;
-               }).map((user)=>{
-=======
               users.filter(
                 (user) => user.Name.toLowerCase().includes(text.toLowerCase()) ||
                 user.company.toLowerCase().includes(text.toLowerCase()) ||
                 user.Package.toString().includes(text)
                 ).map((user)=>{
->>>>>>> 5df660b9710c214ec83e1744f07e2515dd4275d4
                 return(
                     <tr key={user.id}>
                         <td>{user.Name}</td>
                         <td>{user.company}</td>
                         <td>{user.Package}</td>
-<<<<<<< HEAD
                         <td>{user.designation}</td>
-                        
-                        <td><a href={`https://${user.Link}`}>Profile Link</a></td>
-=======
-                        <td>{user.dept}</td>
-                        <td>{user.session}</td>
                         <td>
-                          <a href={`https://www.linkedin.com/in/${user.Link}/`}>Profile Link</a>
+                          <a target='_blank' href={`https://${user.Link}`}>Profile Link</a>
                         </td>
->>>>>>> 5df660b9710c214ec83e1744f07e2515dd4275d4
                      </tr>
                 )
               })

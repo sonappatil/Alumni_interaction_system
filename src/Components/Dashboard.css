@@ -1,0 +1,28 @@
+#text{
+    color:#4f94d4;
+    font-size:48px;
+    animation: shake 2s infinite;
+    font-family: 'Lobster', cursive;
+}
+
+@keyframes shake{
+    0%{
+        transform: rotate(1deg);
+    }
+
+    25%{
+        transform: rotate(0deg);
+    }
+
+    50%{
+        transform: rotate(-1deg);
+    }
+
+    75%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(1 deg);
+    }
+}

@@ -78,7 +78,7 @@ function PlacedStudentsEE() {
                 <th>Company</th>
                 <th>Package</th>
                 <th>Designation</th>
-                <th>Session</th>
+                
                 <th>LinkedIn Profile</th>
             </tr>
             </thead>
@@ -95,8 +95,8 @@ function PlacedStudentsEE() {
                         <td>{user.company}</td>
                         <td>{user.Package}</td>
                         <td>{user.designation}</td>
-                        <td>{user.session}</td>
-                        <td><a href={`https://${user.Link}`}>Profile Link</a></td>
+                       
+                        <td><a target='_blank' href={`https://${user.Link}`}>Profile Link</a></td>
                      </tr>
                   
                 )

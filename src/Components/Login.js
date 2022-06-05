@@ -38,7 +38,7 @@ function Login() {
     <div >
       <NavHome path=''/>
         <center>
-          <h1 class="login">Login Here...</h1>
+          <h1 className="login">Login Here...</h1>
             <div id='main-div' style={{height:'300px'}}>
            
             <section className='input'>
