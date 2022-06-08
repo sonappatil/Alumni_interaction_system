@@ -1,9 +1,10 @@
 import React, { useState,useEffect } from 'react'
 import './PlacedStudents.css'
 import { db } from '../Firebase'
-import { collection , getDocs } from 'firebase/firestore'
-import NavbarForOffCampus from './NavbarForOffCampus';
+import { collection , getDocs  } from 'firebase/firestore'
+//import NavbarForOffCampus from './NavbarForOffCampus';
 import NavHome from './NavHome';
+//import { Link } from 'react-router-dom';
 //import search_icon from '../Images/search_icon.png'
 
 function OffCampus() {
@@ -29,13 +30,16 @@ function OffCampus() {
     getUsers();
   }, [])
 
+
+
   const style ={
    inputstyle:{
      marginTop:'100px',
-    padding:'12px 24px',
+    padding:'16px',
     borderRadius:'20px',
     width:'400px',
-    fontSize:'20px'
+    fontSize:'20px',
+    height:'40px'
    },
    imagestyle:{
     width:'25px' , 
@@ -47,6 +51,7 @@ function OffCampus() {
    }
   }
 
+ 
   
   return (
     
@@ -58,7 +63,7 @@ function OffCampus() {
       <input style={style.inputstyle} value={text} onChange={handleChange} type="text" placeholder='search...' />
     </div>
 
-    <div style={{marginTop:'50px'}}>
+    <div style={{marginTop:'30px'}}>
       
        
            <table >
@@ -67,29 +72,31 @@ function OffCampus() {
             <tr>
                 <th style={{width:'290px'}}>Name</th>
                 <th>Company</th>
-                <th>Package</th>
+               
                 <th>Designation</th>
                 <th>Department</th>
                 <th>Session</th>
                 <th>LinkedIn Profile</th>
+                {/* <th>Update your Data</th> */}
             </tr>
             </thead>
             <tbody>
             {
                users.filter(
                 (user) => user.Name.toLowerCase().includes(text.toLowerCase()) ||
-                user.company.toLowerCase().includes(text.toLowerCase()) ||
-                user.Package.toString().includes(text)
+                user.company.toLowerCase().includes(text.toLowerCase())
+               
                 ).map((user)=>{
                 return(
                     <tr key={user.id}>
                         <td>{user.Name}</td>
                         <td>{user.company}</td>
-                        <td>{user.Package}</td>
+                       
                         <td>{user.designation}</td>
                         <td>{user.dept}</td>
                         <td>{user.session}</td>
                         <td><a target='_blank' href={`https://${user.Link}`}>Profile Link</a></td>
+                        {/* <td><Link to='/updatealumni'><button >Edit</button></Link></td> */}
                      </tr>
                   
                 )

@@ -41,3 +41,16 @@ img{
 a{
     text-decoration: none;
 }
+@media(max-width:900px){
+    #navLogOut{
+        display: flex;
+    }
+  img{
+      height: 50px;
+      width: 50px;
+      margin-left: 3px;
+      margin-top: 5px;
+  }
+ 
+    
+}

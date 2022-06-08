@@ -44,9 +44,7 @@ export function logOut() {
 }
 
 export function signIn(email,password){
-  return signInWithEmailAndPassword(auth,email,password,{
-    url:'http://localhost:3000/'
-  });
+  return signInWithEmailAndPassword(auth,email,password);
 }
  
 export function forgotPassword(email){

@@ -1,43 +1,41 @@
 import React  from 'react'
 import './Login.css'
 import { useState } from 'react';
-import {addDoc,collection} from 'firebase/firestore';
+import {updateDoc,doc} from 'firebase/firestore';
 import {db} from '../Firebase'
 import NavHome from './NavHome';
 
-function AlumniInfo() {
+function UpdateAlumni() {
 const [name, setname] = useState('');
+const [Package, setPackage] = useState()
 const [session, setsession] = useState()
 const [company, setcompany] = useState()
 const [dept, setdept] = useState('')
 const [link, setlink] = useState()
 const [designation, setdesignation] = useState('')
 
-const uploadClickHandler = async() => {
 
-    
-    setcompany('');
-    setdept('');
-    setlink('');
-    setname('');
-    setsession('');
-    setdesignation('');
-    
-    if(name==='' || company==='' || dept==='' || link==='' || session==='' || designation===''){
-        alert('All Fields need to be filled!!')
-    }
-    else{
-        await addDoc(collection(db,'offCampus'),{
+
+  
+const updateUser = async(id,name,Package,company,dept,designation,link,session) => {
+    try{
+        const newFields ={
             Name:name,
-            session:session,
-            company:company,
+            Package:Package,
             dept:dept,
-            Link:link
-             })
-    
-              alert('Uploaded details successfully!! you can check it in offCampus section');
+            company:company,
+            designation:designation,
+            Link:link,
+            session:session
+          }
+          const userDoc = doc(db,"offCampus",id)
+          await updateDoc(userDoc,newFields)
+          alert('success')
     }
-}
+    catch(e){
+        alert(e.message)
+    }
+  }
 
 
 
@@ -45,8 +43,8 @@ const uploadClickHandler = async() => {
     <div >
         <NavHome path='dashboard'/>
         <center>
-            <h1 className="login" style={{marginTop:"100px"}}>Provide your Details to Stay connected with Us...</h1>
-            <div id='main-div' style={{height:'500px' , marginTop:'25px'}}>
+            <h1 className="login" style={{marginTop:"100px"}}>Provide Your Details Here...</h1>
+            <div id='main-div' style={{height:'570px' , marginTop:'25px'}}>
             <section className='input'>
                 <div className="input-group mb-3 ">
                   <input type="text" value={name} onChange={(e) => setname(e.target.value)} className="form-control" placeholder="Full Name" aria-label="Username" aria-describedby="basic-addon1" required/>
@@ -57,6 +55,12 @@ const uploadClickHandler = async() => {
             <section className='input'>
             <div className="input-group mb-3 ">
                 <input type="text" value={company} onChange={(e) => setcompany(e.target.value)} className="form-control" placeholder="Company" aria-label="Username" aria-describedby="basic-addon1" required/>
+            </div>
+            </section>
+
+            <section className='input'>
+            <div className="input-group mb-3 ">
+                <input type="text" value={Package} onChange={(e) => setPackage(e.target.value)} className="form-control" placeholder="Package" aria-label="Username" aria-describedby="basic-addon1" required/>
             </div>
             </section>
 
@@ -84,11 +88,11 @@ const uploadClickHandler = async() => {
             </div>
             </section>
 
-            <button type="button" className="btn btn-info" onClick={uploadClickHandler}>Upload</button>
+            <button type="button" className="btn btn-info" onClick={updateUser(name,Package,company,dept,designation,link,session)}>Update</button>
             </div>
         </center>
     </div>
   )
 }
 // bharti
-export default AlumniInfo
+export default UpdateAlumni

@@ -18,6 +18,7 @@ import SignUp from './Components/SignUp';
 import AlumniInfo from './Components/AlumniInfo';
 import ForgotPass from './Components/ForgotPass';
 import OffCampus from './Components/OffCampus';
+import UpdateAlumni from './Components/UpdateAlumni';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
        <Route path='forgotpassword' element={<ForgotPass/>}/>
        <Route path='offcampus' element={<OffCampus/>}/>
        <Route path='dashboard' element={<Dashboard/>}/>
+       <Route path='updatealumni' element={<UpdateAlumni/>}/>
      </Routes>
      </BrowserRouter>
     </div>

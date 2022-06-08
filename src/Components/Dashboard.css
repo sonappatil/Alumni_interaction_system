@@ -1,28 +1,22 @@
 #text{
     color:#4f94d4;
     font-size:48px;
-    animation: shake 2s infinite;
     font-family: 'Lobster', cursive;
 }
+footer{
+    background-color: #5f6769;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 16px 0px;
+    
+}
+@media(max-width:900px){
+    footer{
+        position: fixed;
+        padding: 8px 9px;
+        left: 0;
 
-@keyframes shake{
-    0%{
-        transform: rotate(1deg);
-    }
-
-    25%{
-        transform: rotate(0deg);
-    }
-
-    50%{
-        transform: rotate(-1deg);
-    }
-
-    75%{
-        transform: rotate(0deg);
-    }
-
-    100%{
-        transform: rotate(1 deg);
     }
 }

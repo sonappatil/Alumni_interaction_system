@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import Interaction from '../Images/Interaction.png';
 import Navbar from './Navbar';
 import './Welcome.css'
@@ -41,10 +41,10 @@ function Home() {
             <Navbar />
             <div class="main-div">
                 <div style={{ width: '600px' }}>
-                    <h3 class="text">Introducing Interaction Portal of TGPCET!!</h3>
+                    <h3 class="text">Welcome to the Interaction Portal of TGPCET !!</h3>
                     <p class="subtext">Search for the Alumni respective to their departments and reach out to them, also get updates of upcoming Placements Drives.</p>
-                    <button className="btn-info btn"  disabled={currentuser ? false : true} ><Link to="/dashboard"  style={{color:'white'}}> Get Started</Link></button>
-                    <p style={{color:'grey',fontFamily:'Satisfy',marginTop:'30px',display: currentuser ? 'none' : 'block'}}>* Note : To make above "Get Started" button "Enable" you need to Sign In first *</p>
+                    {/* <button className="btn-info btn"  disabled={currentuser ? false : true} ><Link to="/dashboard"  style={{color:'white'}}> Get Started</Link></button> */}
+                     <p style={{color:'red',fontFamily:'Satisfy',marginTop:'40px',display: currentuser ? 'none' : 'block'}}>* Note : To move to the " Dashboard Page " you need to " SignIn " first * </p>
                 </div>
             </div>
             <div>

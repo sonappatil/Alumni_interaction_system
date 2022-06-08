@@ -1,33 +1,27 @@
 import React, { useRef,useState } from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import './Login.css'
 import { logOut, signIn } from '../Firebase'
 import NavHome from './NavHome'
 //import { useDispatch } from 'react-redux'
 
 
-function Login() {
+function Login(props) {
  
   const emailRef = useRef();
   const passRef = useRef();
+  const navigate = useNavigate();
+
+
  
-
-
-  const handleLogOut = async() => {
-    try{
-      await logOut();
-      alert('Logged out Successfully!!!')
-    }
-    catch(error){
-      alert(error.message);
-    }
-  }
   const handleLogIn = async() => {
     try{
-      await signIn(emailRef.current.value , passRef.current.value);
+      await signIn(emailRef.current.value , passRef.current.value,props.history);
       
       alert('Logged In sucessfully!!');
       //  <Navigate to='' replace={true}/>
+      navigate('/dashboard');
+     
      
     }
     catch(error){
@@ -58,7 +52,7 @@ function Login() {
 
             <button type="button" className="btn " onClick={handleLogIn} >Log In</button>
 
-             <button type="button" onClick={handleLogOut} className="btn ">Log out</button> 
+              
             </div>
         </center>
     </div>

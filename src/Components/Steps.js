@@ -6,6 +6,7 @@ import './Steps.css';
 function Steps() {
   
   return (
+     <>
     <div style={{marginTop:'50px'}}>
        <div id='steps-wrapper'>
           <div className='steps-class'>
@@ -20,8 +21,8 @@ function Steps() {
           </div>
           <div className='steps-class'>
              <h3>You got Placed OffCampus?</h3>
-             <p>Provide some details about the company you got placed in</p>
-             <Link to='/alumniinfo'><button style={{marginTop:'50px'}} className='continue-btn'>Continue</button></Link>
+             <p>Congratualtions , for getting Placed OffCampus !! Stay connected with your juniors by Providing some details about the company you got placed in</p>
+             <Link to='/alumniinfo'><button style={{marginTop:'20px'}} className='continue-btn'>Continue</button></Link>
           </div>
           <div className='steps-class'>
              <h3>Check for offCampus students</h3>
@@ -29,7 +30,9 @@ function Steps() {
              <Link to='/offcampus'><button style={{marginTop:'50px'}} className='continue-btn'>Continue</button></Link>
           </div>
        </div>
+      
     </div>
+    </>
   )
 }
 

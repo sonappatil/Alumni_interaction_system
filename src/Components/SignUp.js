@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import './Login.css'
 import {signup , useAuth } from '../Firebase'
 import NavHome from './NavHome';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 //import { addDoc, collection } from 'firebase/firestore';
 
 function SignUp() {
@@ -10,12 +10,14 @@ function SignUp() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const currentUser = useAuth();
+  const navigate = useNavigate();
 
   const handleSignUp = async() => {
     //emailRef.current.value='';
    // passwordRef.current.value='';
       await signup(emailRef.current.value,passwordRef.current.value);
-      alert('Registered successfully!!')
+      alert('Registered successfully!!');
+      navigate('/dashboard');
   }
   return (
     <div >

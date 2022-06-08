@@ -60,7 +60,7 @@ function PlacedStudentsME() {
             <tr>
                 <th style={{width:'290px'}}>Name</th>
                 <th>Company</th>
-                <th>Package</th>
+                
                 <th>Designation</th>
                 <th>LinkedIn Profile</th>
             </tr>
@@ -68,15 +68,15 @@ function PlacedStudentsME() {
             {
               users.filter(
                 (user) => user.Name.toLowerCase().includes(text.toLowerCase()) ||
-                user.company.toLowerCase().includes(text.toLowerCase()) ||
-                user.Package.toString().includes(text)
+                user.company.toLowerCase().includes(text.toLowerCase()) 
+               
                 )
                .map((user)=>{
                 return(
                     <tr key={user.id}>
                         <td>{user.Name}</td>
                         <td>{user.company}</td>
-                        <td>{user.Package}</td>
+                        
                         <td>{user.designation}</td>
                         <td><a target='_blank' href={`https://${user.Link}`}>Profile Link</a></td>
                      </tr> 
