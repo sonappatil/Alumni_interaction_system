@@ -26,7 +26,7 @@ function App() {
      <BrowserRouter>
      <Routes>
        <Route path='/' element={<Welcome/>}/>
-       <Route path='it' element={<PlacedStudentsIT/>}/>
+       <Route path='it' element={<PlacedStudentsIT path='/dashboard' heading='Information Technology Department' collection='onCampus'/>}/>
        <Route path='civil' element={<PlacedStudentsCivil/>}/>
        <Route path='mech' element={<PlacedStudentsME/>}/>
        <Route path='cse' element={<PlacedStudentsCSE/>}/>

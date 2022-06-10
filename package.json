@@ -1,5 +1,6 @@
 {
   "name": "alumni-interaction",
+  "homepage": "https://krutikajichkar.github.io/Alumni-student-interaction-system",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
