@@ -34,4 +34,4 @@ e.preventDefault()
   )
 }
 
-export default ForgotPass
+export default ForgotPass;

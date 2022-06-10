@@ -33,3 +33,6 @@
          })
 
           alert('Uploaded details successfully!! you can check it in offCampus section');
+
+
+          kkkkkkkkkkkkkkk
