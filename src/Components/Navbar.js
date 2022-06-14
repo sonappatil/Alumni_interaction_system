@@ -2,15 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 //import { Link } from 'react-router-dom'
 import './Navbar.css'
-import { useAuth } from '../Firebase'
-import { logOut } from '../Firebase'
+
+
 
 
 function Navbar() {
-    const currentUser = useAuth();
-
-  
-
    
   return (
     //   <nav className='nav-bar'>

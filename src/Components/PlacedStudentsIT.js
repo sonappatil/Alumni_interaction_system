@@ -16,7 +16,7 @@ function PlacedStudentsIT(props) {
     settext(e.target.value);
   }
 
-  useEffect(() => {
+  useEffect((props) => {
     const getUsers = async () => {
       const userCollectionRef = collection(db , `${props.collection}`);
       const data = await getDocs(userCollectionRef);
@@ -106,7 +106,7 @@ function PlacedStudentsIT(props) {
                     <td>{user.Name}</td>
                     <td>{user.company}</td>
                     <td>{user.designation}</td>
-                    <td><a target='_blank' rel=' noopener' href={`https://${user.Link}`}>Profile Link</a></td>
+                    <td><a target="_blank" rel ="noreferrer" href={`https://${user.Link}`}>Profile Link</a></td>
                   </tr>
 
                 )
