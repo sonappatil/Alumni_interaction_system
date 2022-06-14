@@ -95,7 +95,7 @@ function OffCampus() {
                         <td>{user.designation}</td>
                         <td>{user.dept}</td>
                         <td>{user.session}</td>
-                        <td><a target='_blank' href={`https://${user.Link}`}>Profile Link</a></td>
+                        <td><a  href={`https://${user.Link}`} target='_blank' rel='noreferrer'>Profile Link</a></td>
                         {/* <td><Link to='/updatealumni'><button >Edit</button></Link></td> */}
                      </tr>
                   
