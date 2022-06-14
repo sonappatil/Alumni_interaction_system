@@ -1,5 +1,5 @@
 import React from 'react'
-import NavHome from './NavHome'
+
 import Steps from './Steps'
 import './Steps.css'
 import './Dashboard.css'

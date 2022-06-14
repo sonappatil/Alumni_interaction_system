@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import './Login.css'
-import {signup , useAuth } from '../Firebase'
+import {signup } from '../Firebase'
 import NavHome from './NavHome';
 import { Link, useNavigate } from 'react-router-dom';
 //import { addDoc, collection } from 'firebase/firestore';
@@ -9,7 +9,7 @@ function SignUp() {
 
   const emailRef = useRef();
   const passwordRef = useRef();
-  const currentUser = useAuth();
+  
   const navigate = useNavigate();
 
   const handleSignUp = async() => {

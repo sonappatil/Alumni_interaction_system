@@ -106,7 +106,7 @@ function PlacedStudentsIT(props) {
                     <td>{user.Name}</td>
                     <td>{user.company}</td>
                     <td>{user.designation}</td>
-                    <td><a target='_blank' href={`https://${user.Link}`}>Profile Link</a></td>
+                    <td><a target='_blank' rel=' noopener' href={`https://${user.Link}`}>Profile Link</a></td>
                   </tr>
 
                 )

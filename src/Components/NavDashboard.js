@@ -20,9 +20,7 @@ function NavDashboard() {
     }
   }
 
-    const mystyle = {
-        marginLeft:'600px'
-     }
+   
 
   return (
       <>

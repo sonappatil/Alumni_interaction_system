@@ -1,7 +1,7 @@
-import React, { useRef,useState } from 'react'
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import React, { useRef} from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import './Login.css'
-import { logOut, signIn } from '../Firebase'
+import {  signIn } from '../Firebase'
 import NavHome from './NavHome'
 //import { useDispatch } from 'react-redux'
 
