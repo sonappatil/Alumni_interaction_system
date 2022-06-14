@@ -13,7 +13,7 @@ function NavDashboard() {
     try{
       await logOut();
       alert('Logged out Successfully!!!')
-      navigate('/')
+      navigate('/Alumni-student-interaction-system')
     }
     catch(error){
       alert(error.message);

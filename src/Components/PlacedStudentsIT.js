@@ -16,7 +16,7 @@ function PlacedStudentsIT(props) {
     settext(e.target.value);
   }
 
-  useEffect((props) => {
+  useEffect(() => {
     const getUsers = async () => {
       const userCollectionRef = collection(db , `${props.collection}`);
       const data = await getDocs(userCollectionRef);
